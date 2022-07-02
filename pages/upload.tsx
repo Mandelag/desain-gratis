@@ -28,13 +28,14 @@ Pellentesque sit amet cursus lorem, ut pellentesque justo. Vestibulum quis laore
 
 type ButtonIconProps = {
     icon?: String,
+    actionItem?: boolean,
 }
 
-const ButtonIcon = ({icon = ""}: ButtonIconProps) => {
+const ButtonIcon = ({icon = "", actionItem = false}: ButtonIconProps) => {
     return (
     <>
     <div className="mdc-touch-target-wrapper">
-        <button className="mdc-icon-button mdc-top-app-bar__action-item">
+        <button className={`mdc-icon-button ${actionItem ? "mdc-top-app-bar__action-item" : ""}`}>
             <div className="mdc-icon-button__ripple"></div>
             <span className="mdc-icon-button__focus-ring"></span>
             {/* <span className={"material-symbols-outlined"}>favorite</span> */}
@@ -60,16 +61,16 @@ const TopAppBar = ({children, title = ""}: TopAppBarProps) => {
 
     return (
     <>
-        <header className="mdc-top-app-bar">
+<header ref={ref} className="mdc-top-app-bar">
   <div className="mdc-top-app-bar__row">
     <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
       <button className="material-symbols-outlined mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Close">close</button>
       <span className="mdc-top-app-bar__title">Contextual title</span>
     </section>
     <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-      <button className="material-symbols-outlined mdc-top-app-bar__action-item mdc-icon-button" aria-label="Share">share</button>
-      <button className="material-symbols-outlined mdc-top-app-bar__action-item mdc-icon-button" aria-label="Delete">delete</button>
-      <button className="material-symbols-outlined mdc-top-app-bar__action-item mdc-icon-button" aria-label="Open menu">more_vert</button>
+      <ButtonIcon icon="share" actionItem/>
+      <ButtonIcon icon="delete" actionItem/>
+      <ButtonIcon icon="more_vert" actionItem/>
     </section>
   </div>
 </header>
