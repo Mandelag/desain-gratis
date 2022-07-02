@@ -1,0 +1,22 @@
+@use "@material/theme" with (
+  $primary: #fcb8ab,
+  $secondary: #feeae6,
+  $on-primary: #442b2d,
+  $on-secondary: #442b2d,
+);
+@use '@material/button/mdc-button';
+@use '@material/button';
+
+/* variables.module.scss */
+// $primary-color: #64ff00;
+
+// :export {
+//   primaryColor: $primary-color;
+// }
+
+// .mdc-button {
+//   @extend .mdc-button, .mdc-button--raised;
+//   // @include button.filled-accessible(white);
+//   @include button.height(100px);
+//   // @include button.ink-color(white);
+// }

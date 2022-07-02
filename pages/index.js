@@ -1,4 +1,7 @@
-import Head from 'next/head'
+import Head from 'next/head';
+
+import styles from '../styles/variables.module.scss';
+// import {} from '@material/theme';
 
 export default function Home() {
   return (
@@ -46,6 +49,15 @@ export default function Home() {
             </p>
           </a>
         </div>
+        <button className={styles["mdc-button"] + " " + styles["mdc-button--raised"]} onClick={() => {
+          console.log("HEHE");
+          const r = document.querySelector(':root');
+          r.style.setProperty('--mdc-theme-primary', 'lightblue');
+          r.style.setProperty('--mdc-theme-on-primary', 'green');
+        }}>
+          <div className={styles["mdc-button__ripple"]}></div>
+          <span className={styles["mdc-button__label"]}>Mantap AJGILAA</span>
+        </button>
       </main>
 
       <footer>
