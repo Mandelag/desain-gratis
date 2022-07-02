@@ -1,6 +1,10 @@
 import { ReactNode, useCallback, useRef, useState } from 'react';
-import {MDCTopAppBar} from '@material/top-app-bar';
-import styles from '../styles/upload.module.scss';
+import {MDCTopAppBar, MDCShortTopAppBarFoundation, MDCTopAppBarAdapter} from '@material/top-app-bar';
+// import styles from '../styles/upload.module.scss';
+import '@material/top-app-bar/dist/mdc.top-app-bar.css';
+import '@material/button/dist/mdc.button.css';
+import '@material/icon-button/dist/mdc.icon-button.css';
+import '@material/ripple/dist/mdc.ripple.css';
 
 const UploadPage = () => {
     return (
@@ -29,12 +33,12 @@ type ButtonIconProps = {
 const ButtonIcon = ({icon = ""}: ButtonIconProps) => {
     return (
     <>
-    <div className={styles["mdc-touch-target-wrapper"]}>
-        <button className={styles["mdc-icon-button"]}>
-            <div className={styles["mdc-icon-button__ripple"]}></div>
-            <span className={styles["mdc-icon-button__focus-ring"]}></span>
+    <div className="mdc-touch-target-wrapper">
+        <button className="mdc-icon-button mdc-top-app-bar__action-item">
+            <div className="mdc-icon-button__ripple"></div>
+            <span className="mdc-icon-button__focus-ring"></span>
             {/* <span className={"material-symbols-outlined"}>favorite</span> */}
-            <span className={"material-symbols-outlined " + styles["gg"]}>{icon}</span>
+            <span className="material-symbols-outlined">{icon}</span>
         </button>
     </div>
     </>
@@ -46,33 +50,30 @@ type TopAppBarProps = {
     title?: string
 }
 
-const TopAppBar = ({children, title = ""}: TopAppBarProps) => {
-    // const ref = useState(null);
-    
+const TopAppBar = ({children, title = ""}: TopAppBarProps) => {    
     const ref = useCallback((node) => {
         if (node !== null) {
             const t = new MDCTopAppBar(node);
-            console.log("GEGEE");
-            // setRef(node);
+            console.log(`JIJII ${t} ${node}`);
         }
     }, []);
 
     return (
     <>
-        <header ref={ref} className={styles["mdc-top-app-bar"]}>
-            <div className={styles["mdc-top-app-bar__row"]}>
-                <section className={`${styles['mdc-top-app-bar__section']} ${styles['mdc-top-app-bar__section--align-start']}`}>
-                    <ButtonIcon icon="menu"/>
-                    <span className={styles["mdc-top-app-bar__title"]}>{title}</span>
-                </section>
-                <section className={`${styles['mdc-top-app-bar__section']} ${styles['mdc-top-app-bar__section--align-end']}`} role="toolbar">
-                    <ButtonIcon icon="favorite"/>
-                    <ButtonIcon icon="share"/>
-                    <ButtonIcon icon="more_vert"/>
-                </section>
-            </div>
-        </header>
-        <main className={`${styles['mdc-top-app-bar--fixed-adjust']}`}>
+        <header className="mdc-top-app-bar">
+  <div className="mdc-top-app-bar__row">
+    <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <button className="material-symbols-outlined mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Close">close</button>
+      <span className="mdc-top-app-bar__title">Contextual title</span>
+    </section>
+    <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+      <button className="material-symbols-outlined mdc-top-app-bar__action-item mdc-icon-button" aria-label="Share">share</button>
+      <button className="material-symbols-outlined mdc-top-app-bar__action-item mdc-icon-button" aria-label="Delete">delete</button>
+      <button className="material-symbols-outlined mdc-top-app-bar__action-item mdc-icon-button" aria-label="Open menu">more_vert</button>
+    </section>
+  </div>
+</header>
+        <main className="mdc-top-app-bar--fixed-adjust">
             {children}
         </main>
     </>
