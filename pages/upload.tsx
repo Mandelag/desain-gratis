@@ -9,8 +9,7 @@ import '@material/ripple/dist/mdc.ripple.css';
 const UploadPage = () => {
     return (
         <>
-            <TopAppBar title="Webp Converter">
-                
+            <TopAppBar title="Webp Converter">     
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis rhoncus lectus sit amet malesuada. Aliquam ut posuere diam, varius consectetur nulla. Morbi bibendum elit in rutrum efficitur. Aliquam tempor, est eget tincidunt ullamcorper, erat nisi rutrum lorem, in varius risus enim vitae lorem. Ut sit amet mauris eu libero vulputate fringilla. Donec posuere turpis ut velit imperdiet, ultrices cursus leo pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sed feugiat diam.
 <br /><br /><br />
 Cras ante magna, tempus quis vehicula vitae, porta vel orci. Sed nec vestibulum odio, in varius velit. Nulla facilisi. Nam ullamcorper diam a massa venenatis ullamcorper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla laoreet vestibulum ex, quis placerat risus porta eu. Donec at orci a quam egestas sodales vitae sed odio. In ante est, pharetra ac auctor nec, accumsan eu lacus. Duis malesuada, sem in tempus lacinia, ligula lectus dictum risus, id auctor lacus quam eu lorem. Aenean ornare libero lacus, a tempus tellus tincidunt eu. Nulla facilisi. Pellentesque porttitor vulputate efficitur. Cras placerat ante nec tortor pharetra, ac ultrices ligula convallis. Integer a nibh condimentum, tincidunt orci nec, malesuada libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sodales vel nunc at dictum.
@@ -64,7 +63,7 @@ const TopAppBar = ({children, title = ""}: TopAppBarProps) => {
 <header ref={ref} className="mdc-top-app-bar">
   <div className="mdc-top-app-bar__row">
     <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-      <button className="material-symbols-outlined mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Close">close</button>
+      <ButtonIcon icon="close" actionItem/>
       <span className="mdc-top-app-bar__title">Contextual title</span>
     </section>
     <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
