@@ -1,4 +1,5 @@
 import { ReactNode, useCallback, useRef, useState } from 'react';
+import { FixedTopAppBar, TopAppBar } from './upload';
 
 type BottomSheetType = {
     children: ReactNode
@@ -19,6 +20,7 @@ const BottomSheetDemo = () => {
     return (
         <>
         <main style={{width: '100%'}}>
+            <TopAppBar title="Menu" />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis rhoncus lectus sit amet malesuada. Aliquam ut posuere diam, varius consectetur nulla. Morbi bibendum elit in rutrum efficitur. Aliquam tempor, est eget tincidunt ullamcorper, erat nisi rutrum lorem, in varius risus enim vitae lorem. Ut sit amet mauris eu libero vulputate fringilla. Donec posuere turpis ut velit imperdiet, ultrices cursus leo pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sed feugiat diam.
             <br /><br /><br />
             Cras ante magna, tempus quis vehicula vitae, porta vel orci. Sed nec vestibulum odio, in varius velit. Nulla facilisi. Nam ullamcorper diam a massa venenatis ullamcorper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla laoreet vestibulum ex, quis placerat risus porta eu. Donec at orci a quam egestas sodales vitae sed odio. In ante est, pharetra ac auctor nec, accumsan eu lacus. Duis malesuada, sem in tempus lacinia, ligula lectus dictum risus, id auctor lacus quam eu lorem. Aenean ornare libero lacus, a tempus tellus tincidunt eu. Nulla facilisi. Pellentesque porttitor vulputate efficitur. Cras placerat ante nec tortor pharetra, ac ultrices ligula convallis. Integer a nibh condimentum, tincidunt orci nec, malesuada libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sodales vel nunc at dictum.
@@ -33,10 +35,8 @@ const BottomSheetDemo = () => {
         <div style={{minHeight: '20vh', backgroundColor: 'gray', width: '100%'}}>
             placeholder
         </div>
-        <div style={{height: '20vh',  position: 'fixed', bottom: '0', backgroundColor: 'pink'}}>
-            <div style={{width:'100%', backgroundColor: 'green'}}>
-                Scroll from here
-            </div>
+        <div style={{height: '20vh',  position: 'fixed', bottom: '0', backgroundColor: 'white', boxShadow: '0px 0px 1px 0px lightgray'}}>
+            <FixedTopAppBar title="Your order" />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis rhoncus lectus sit amet malesuada. Aliquam ut posuere diam, varius consectetur nulla. Morbi bibendum elit in rutrum efficitur. Aliquam tempor, est eget tincidunt ullamcorper, erat nisi rutrum lorem, in varius risus enim vitae lorem. Ut sit amet mauris eu libero vulputate fringilla. Donec posuere turpis ut velit imperdiet, ultrices cursus leo pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sed feugiat diam.
             <br /><br /><br />
             Cras ante magna, tempus quis vehicula vitae, porta vel orci. Sed nec vestibulum odio, in varius velit. Nulla facilisi. Nam ullamcorper diam a massa venenatis ullamcorper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla laoreet vestibulum ex, quis placerat risus porta eu. Donec at orci a quam egestas sodales vitae sed odio. In ante est, pharetra ac auctor nec, accumsan eu lacus. Duis malesuada, sem in tempus lacinia, ligula lectus dictum risus, id auctor lacus quam eu lorem. Aenean ornare libero lacus, a tempus tellus tincidunt eu. Nulla facilisi. Pellentesque porttitor vulputate efficitur. Cras placerat ante nec tortor pharetra, ac ultrices ligula convallis. Integer a nibh condimentum, tincidunt orci nec, malesuada libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sodales vel nunc at dictum.

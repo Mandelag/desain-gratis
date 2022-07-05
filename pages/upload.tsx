@@ -49,8 +49,38 @@ type TopAppBarProps = {
     children?: ReactNode
     title?: string
 }
+export const FixedTopAppBar = ({children, title = ""}: TopAppBarProps) => {    
+    const ref = useCallback((node) => {
+        if (node !== null) {
+            // const t = new MDCTopAppBar(node);
+            // console.log(`JIJII ${t} ${node}`);
+            node.style.setProperty('--mdc-theme-primary', 'white');
+            node.style.setProperty('--mdc-theme-on-primary', 'black');
+            node.style.setProperty('color', 'var(--mdc-theme-on-primary, black)');
+        }
+    }, []);
 
-const TopAppBar = ({children, title = ""}: TopAppBarProps) => {    
+    return (
+    <>
+<header ref={ref}>
+  <div className="mdc-top-app-bar__row">
+    <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <ButtonIcon icon="expand_more" actionItem/>
+      <span className="mdc-top-app-bar__title">{title}</span>
+    </section>
+    <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          {/* <ButtonIcon icon="more_vert" actionItem/> */}
+    </section>
+  </div>
+</header>
+        <main>
+            {children}
+        </main>
+    </>
+    )
+}
+
+export const TopAppBar = ({children, title = ""}: TopAppBarProps) => {    
     const ref = useCallback((node) => {
         if (node !== null) {
             const t = new MDCTopAppBar(node);
@@ -63,12 +93,12 @@ const TopAppBar = ({children, title = ""}: TopAppBarProps) => {
 <header ref={ref} className="mdc-top-app-bar">
   <div className="mdc-top-app-bar__row">
     <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-      <ButtonIcon icon="close" actionItem/>
-      <span className="mdc-top-app-bar__title">Contextual title</span>
+      <ButtonIcon icon="menu" actionItem/>
+      <span className="mdc-top-app-bar__title">{title}</span>
     </section>
     <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
       <ButtonIcon icon="share" actionItem/>
-      <ButtonIcon icon="delete" actionItem/>
+      <ButtonIcon icon="help" actionItem/>
       <ButtonIcon icon="more_vert" actionItem/>
     </section>
   </div>
