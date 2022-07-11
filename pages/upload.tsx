@@ -30,7 +30,7 @@ type ButtonIconProps = {
     actionItem?: boolean,
 }
 
-const ButtonIcon = ({icon = "", actionItem = false}: ButtonIconProps) => {
+export const ButtonIcon = ({icon = "", actionItem = false}: ButtonIconProps) => {
     return (
     <>
     <div className="mdc-touch-target-wrapper">

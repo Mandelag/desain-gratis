@@ -8,6 +8,7 @@
   "dependencies": {
     "@material/button": "^14.0.0",
     "@material/icon-button": "^14.0.0",
+    "@material/layout-grid": "^14.0.0",
     "@material/ripple": "^14.0.0",
     "@material/theme": "^14.0.0",
     "@material/top-app-bar": "^14.0.0",
