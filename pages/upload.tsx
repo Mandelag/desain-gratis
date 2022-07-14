@@ -5,6 +5,7 @@ import '@material/top-app-bar/dist/mdc.top-app-bar.css';
 import '@material/button/dist/mdc.button.css';
 import '@material/icon-button/dist/mdc.icon-button.css';
 import '@material/ripple/dist/mdc.ripple.css';
+import '@material/theme/dist/mdc.theme.css';
 
 const UploadPage = () => {
     return (
@@ -84,7 +85,6 @@ export const TopAppBar = ({children, title = ""}: TopAppBarProps) => {
     const ref = useCallback((node) => {
         if (node !== null) {
             const t = new MDCTopAppBar(node);
-            console.log(`JIJII ${t} ${node}`);
         }
     }, []);
 
@@ -94,7 +94,7 @@ export const TopAppBar = ({children, title = ""}: TopAppBarProps) => {
   <div className="mdc-top-app-bar__row">
     <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
       <ButtonIcon icon="menu" actionItem/>
-      <span className="mdc-top-app-bar__title">{title}</span>
+      <span className="mdc-top-app-bar__title mdc-theme--on-primary">{title}</span>
     </section>
     <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
       <ButtonIcon icon="share" actionItem/>
