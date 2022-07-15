@@ -1,3 +1,10 @@
+// @use "@material/layout-grid/mdc-layout-grid";
+@use "@material/layout-grid";
+@use "@material/layout-grid/variables";
+
+@use "sass:map";
+
+
 .container {
     height: 80vh;
     display: flex;
@@ -7,6 +14,18 @@
     flex-direction: column;
 }
 
-.container-content {
+.navbar {
+    // $phone: map.get(layout-grid.$breakpoints, "phone");
+    // $tablet: map.get(layout-grid.$breakpoints, "tablet");
+    // $desktop: map.get(layout-grid.$breakpoints, "desktop");
+    // @media (min-width: $phone) {
+    //     display: none;
+    // }
+    // @media (min-width: $tablet) {
+    //     display: none;
+    // }
+    // @media (min-width: $desktop) {
+    //  display: block;
+    // }
 
 }

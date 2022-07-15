@@ -29,12 +29,13 @@ Pellentesque sit amet cursus lorem, ut pellentesque justo. Vestibulum quis laore
 type ButtonIconProps = {
     icon?: String,
     actionItem?: boolean,
+    onClick?: () => void,
 }
 
-export const ButtonIcon = ({icon = "", actionItem = false}: ButtonIconProps) => {
+export const ButtonIcon = ({icon = "", actionItem = false, onClick = () => {}}: ButtonIconProps) => {
     return (
     <>
-    <div className="mdc-touch-target-wrapper">
+    <div className="mdc-touch-target-wrapper" onClick={onClick}>
         <button className={`mdc-icon-button ${actionItem ? "mdc-top-app-bar__action-item" : ""}`}>
             <div className="mdc-icon-button__ripple"></div>
             <span className="mdc-icon-button__focus-ring"></span>
@@ -49,6 +50,7 @@ export const ButtonIcon = ({icon = "", actionItem = false}: ButtonIconProps) => 
 type TopAppBarProps = {
     children?: ReactNode
     title?: string
+    onMenu?: () => void,
 }
 export const FixedTopAppBar = ({children, title = ""}: TopAppBarProps) => {    
     const ref = useCallback((node) => {
@@ -81,7 +83,7 @@ export const FixedTopAppBar = ({children, title = ""}: TopAppBarProps) => {
     )
 }
 
-export const TopAppBar = ({children, title = ""}: TopAppBarProps) => {    
+export const TopAppBar = ({onMenu = () => {}, title = ""}: TopAppBarProps) => {    
     const ref = useCallback((node) => {
         if (node !== null) {
             const t = new MDCTopAppBar(node);
@@ -90,10 +92,11 @@ export const TopAppBar = ({children, title = ""}: TopAppBarProps) => {
 
     return (
     <>
-<header ref={ref} className="mdc-top-app-bar">
+    {/* mdc-top-app-bar--fixed */}
+<header ref={ref} className="mdc-top-app-bar" style={{zIndex: 8}}> 
   <div className="mdc-top-app-bar__row">
     <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-      <ButtonIcon icon="menu" actionItem/>
+      <ButtonIcon icon="menu" actionItem onClick={onMenu} />
       <span className="mdc-top-app-bar__title mdc-theme--on-primary">{title}</span>
     </section>
     <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
@@ -103,9 +106,9 @@ export const TopAppBar = ({children, title = ""}: TopAppBarProps) => {
     </section>
   </div>
 </header>
-        <main className="mdc-top-app-bar--fixed-adjust">
-            {children}
-        </main>
+        {/* <main className="mdc-top-app-bar--fixed-adjust"> */}
+            {/* {children} */}
+        {/* </main> */}
     </>
     )
 }
