@@ -4,7 +4,10 @@ import '../styles/vars.css';
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
-  return (
+ // Use the layout defined at the page level, if available
+ const getLayout = Component.getLayout || ((page) => page)
+
+ return getLayout(
     <>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
