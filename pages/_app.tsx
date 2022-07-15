@@ -8,10 +8,9 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
     <>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="trusted auction" />
-        <meta name="description" content="trusted auction in Indonesia" />
-        <meta name="description" content="everyone can create an auction" />
-        <meta name="description" content="easy auction" />
+        <meta name="author" content="Keenan Mandela Gebze" />
+        <meta name="description" content="Keenan Gebze's blog" />
+        <meta name="application-name" content="desain.gratis" />
       </Head>
       <Component {...pageProps} />
     </>
