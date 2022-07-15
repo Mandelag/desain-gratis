@@ -12,6 +12,7 @@
     "@material/layout-grid": "^14.0.0",
     "@material/list": "^14.0.0",
     "@material/ripple": "^14.0.0",
+    "@material/tab": "^14.0.0",
     "@material/tab-bar": "^14.0.0",
     "@material/tab-indicator": "^14.0.0",
     "@material/tab-scroller": "^14.0.0",

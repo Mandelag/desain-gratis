@@ -19,7 +19,6 @@ import '@material/icon-button/dist/mdc.icon-button.css';
 import '@material/top-app-bar/dist/mdc.top-app-bar.css';
 import '@material/button/dist/mdc.button.css';
 import '@material/icon-button/dist/mdc.icon-button.css';
-import '@material/ripple/dist/mdc.ripple.css';
 import '@material/theme/dist/mdc.theme.css'
 
 const presets = [
