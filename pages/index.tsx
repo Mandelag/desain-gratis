@@ -1,6 +1,6 @@
 import {MyContext} from '../components/header';
 import Header from '../components/header';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 
 // import Head from 'next/head';
 
@@ -19,6 +19,10 @@ import styles from '../styles/index.module.scss';
   
 const IndexPage = () => {
     const ctx = useContext(MyContext);
+    useEffect(() => {
+      ctx.changeTitle("Home");
+    }, [ctx.title])
+    
     return (
           <div className="mdc-layout-grid__inner">
             <div className={`mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-8-desktop ${styles.container}`}>
@@ -31,7 +35,7 @@ const IndexPage = () => {
                       <span className="mdc-button__touch"></span>
                       <span className="mdc-button__label">SUS BUTTON</span>
                     </button>
-\                  </div>
+                  </div>
             </div>
             <div className="mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop mdc-theme--surface	 mdc-theme--on-surface">
                     <p className="mdc-typography--body1">

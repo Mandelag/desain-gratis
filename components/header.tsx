@@ -55,6 +55,7 @@ const presets = [
 
 export const MyContext = React.createContext({
     changeTitle: (newTitle: string) => {},
+    title: "",
     toggleTheme: () => {},
 });
 
@@ -162,6 +163,7 @@ const IndexPage = ({children}) => {
             <MyContext.Provider value={{
                     changeTitle: changeTitle,
                     toggleTheme: toggleTheme,
+                    title: title,
                 }}>
           {children}
           </MyContext.Provider>
