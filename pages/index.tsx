@@ -9,7 +9,6 @@ import '@material/ripple/dist/mdc.ripple.css';
 import '@material/theme/dist/mdc.theme.css';
 import '@material/button/dist/mdc.button.css';
 import '@material/icon-button/dist/mdc.icon-button.css';
-import {MDCTopAppBar} from '@material/top-app-bar';
 
 import { TopAppBar } from './upload';
 import styles from '../styles/index.module.scss';
@@ -102,6 +101,8 @@ const IndexPage = () => {
   // body.style.setProperty('color', 'var(--mdc-theme-on-primary, black)');  
   body?.style.setProperty('--mdc-theme-primary', preset.primary);
   body?.style.setProperty('--mdc-theme-on-primary', preset.onPrimary);
+  body?.style.setProperty('--mdc-theme-secondary', preset.onPrimary);
+  body?.style.setProperty('--ripples-color', preset.onPrimary);
   // }
 
   return (
@@ -131,7 +132,7 @@ const IndexPage = () => {
           </nav>
         </div>
       </aside>
-      <div className="mdc-drawer-scrim "></div>
+      <div className={`mdc-drawer-scrim ${styles['navbar']}`}></div>
       <div className="mdc-top-app-bar--fixed-adjust">
       <div className="mdc-layout-grid mdc-top-app-bar--fixed-adjust">        
         <div className="mdc-layout-grid__inner">
@@ -141,7 +142,7 @@ const IndexPage = () => {
                 </h1>
                 <div className="mdc-touch-target-wrapper" onClick={changeTheme}>
                   <button className="mdc-button mdc-button--touch mdc-button mdc-button--raised">
-                    <span className="mdc-button__ripple"></span>
+                    <span className="mdc-button__ripple mdc-ripple-surface--accent"></span>
                     <span className="mdc-button__touch"></span>
                     <span className="mdc-button__label">SUS BUTTON</span>
                   </button>

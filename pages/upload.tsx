@@ -7,6 +7,8 @@ import '@material/icon-button/dist/mdc.icon-button.css';
 import '@material/ripple/dist/mdc.ripple.css';
 import '@material/theme/dist/mdc.theme.css';
 
+import styles from '../styles/index.module.scss';
+
 const UploadPage = () => {
     return (
         <>
@@ -35,9 +37,10 @@ type ButtonIconProps = {
 export const ButtonIcon = ({icon = "", actionItem = false, onClick = () => {}}: ButtonIconProps) => {
     return (
     <>
-    <div className="mdc-touch-target-wrapper" onClick={onClick}>
-        <button className={`mdc-icon-button ${actionItem ? "mdc-top-app-bar__action-item" : ""}`}>
-            <div className="mdc-icon-button__ripple"></div>
+    <div className={`mdc-touch-target-wrapper ${styles.ripples}`} onClick={onClick}>
+        <button className={`mdc-icon-button  ${actionItem ? "mdc-top-app-bar__action-item" : ""}`}>
+            {/* <div className="mdc-icon-button__ripple" style={{fill: 'red'}}></div> */}
+            {/* <div className={`mdc-ripple-surface ${styles.ripples}`}></div> */}
             <span className="mdc-icon-button__focus-ring"></span>
             {/* <span className={"material-symbols-outlined"}>favorite</span> */}
             <span className="material-symbols-outlined">{icon}</span>

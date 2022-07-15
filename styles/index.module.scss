@@ -1,9 +1,9 @@
 // @use "@material/layout-grid/mdc-layout-grid";
 @use "@material/layout-grid";
 @use "@material/layout-grid/variables";
+@use "@material/ripple";
 
 @use "sass:map";
-
 
 .container {
     height: 80vh;
@@ -15,17 +15,14 @@
 }
 
 .navbar {
-    // $phone: map.get(layout-grid.$breakpoints, "phone");
-    // $tablet: map.get(layout-grid.$breakpoints, "tablet");
-    // $desktop: map.get(layout-grid.$breakpoints, "desktop");
-    // @media (min-width: $phone) {
-    //     display: none;
-    // }
-    // @media (min-width: $tablet) {
-    //     display: none;
-    // }
-    // @media (min-width: $desktop) {
-    //  display: block;
-    // }
-
+    height: 100vh;
 }
+
+.ripples {
+    @include ripple.surface;
+    @include ripple.radius-unbounded;
+    @include ripple.states-base-color( var(--ripples-color, black)); // or using var(--..., ..);
+    // : #{$accent-color};
+    // @include ripple.
+    @include ripple.states-opacities((hover: .1, focus: .3, press: .4));  
+  }

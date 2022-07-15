@@ -1,4 +1,5 @@
 import 'normalize.css/normalize.css';
+import '../styles/vars.css';
 
 import Head from 'next/head';
 
