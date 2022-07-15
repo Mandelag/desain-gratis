@@ -158,7 +158,6 @@ const IndexPage = ({children}) => {
       </aside>
       <div className={`mdc-drawer-scrim ${styles['navbar']}`}></div>
       <div className="mdc-top-app-bar--fixed-adjust">
-      <div className="mdc-layout-grid mdc-top-app-bar--fixed-adjust">        
             {/* https://stackoverflow.com/questions/32370994/how-to-pass-props-to-this-props-children */}
             <MyContext.Provider value={{
                     changeTitle: changeTitle,
@@ -167,7 +166,6 @@ const IndexPage = ({children}) => {
                 }}>
           {children}
           </MyContext.Provider>
-      </div>
     </div>
   </body>
   )
