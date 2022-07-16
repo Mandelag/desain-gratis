@@ -58,7 +58,7 @@ const CVPage = () => {
           <div className="mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-9-desktop mdc-theme--surface	 mdc-theme--on-surface">
 
 
-          <div className={`mdc-tab-bar`} role="tablist" ref={ref}>
+          {/* <div className={`mdc-tab-bar`} role="tablist" ref={ref}>
             <div className="mdc-tab-scroller">
                 <div className="mdc-tab-scroller__scroll-area">
                     <div className="mdc-tab-scroller__scroll-content">
@@ -109,28 +109,56 @@ const CVPage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
                 <div className="mdc-layout-grid">   
-                <p className="mdc-typography--subtitle2">Software Engineer Tokopedia (2019 - current)</p>
-                    <p className="mdc-typography--subtitle1"></p>
-                    <p className="mdc-typography--subtitle1">Home Recommendation &amp; Personalization</p>
-                    <p className="mdc-typography--body1">Responsible for maintaining Tokopedia's personalization service</p>
-                </div>
-                <div className="mdc-layout-grid">   
-                <p className="mdc-typography--subtitle2">Software Engineer at PT. Antares Global Teknologi (2018 - 2019)</p>
-                    <p className="mdc-typography--subtitle1"></p>
-                    <p className="mdc-typography--subtitle1">Home Recommendation &amp; Personalization</p>
-                    <p className="mdc-typography--body1">Responsible for maintaining Tokopedia's personalization service</p>
-                </div>
-                <div className="mdc-layout-grid">   
-                <p className="mdc-typography--subtitle2">Solutions Engineer at Esri Indonesia (2017 - 2018)</p>
-                    <p className="mdc-typography--subtitle1"></p>
-                    <p className="mdc-typography--subtitle1">Home Recommendation &amp; Personalization</p>
-                    <p className="mdc-typography--body1">Responsible for maintaining Tokopedia's personalization service</p>
-                </div>
+                    <p className="mdc-typography--headline6">Tokopedia</p>
+                    <p className="mdc-typography--caption">
+                        PT. Tokopedia <br />
+                        Back End Software Engineer <br />
+                        Home Recommendation and Personalization <br />
+                        (2019 - current) <br />
+                    </p>
+                    <p className="mdc-typography--body1">
+                        Tokopedia is the biggest online market place in Indonesia. <br />
+                    </p>
+                    <ul>
+                        <li className="mdc-typography--caption">Maintain and develop Tokopedia's high RPS personalization service and data pipelines</li>
+                        <li className="mdc-typography--caption">Do research and routinely share knowledge with other team members</li>
+                        <li className="mdc-typography--caption">So many more...</li>
+                    </ul>
 
+                    <p className="mdc-typography--headline6">Bahasa.ai </p>
+                    <p className="mdc-typography--caption">
+                        PT. Antares Global Teknologi <br />
+                        Software Engineer <br />
+                        (2018 - 2019) <br />
+                    </p>
+                    <p className="mdc-typography--body1">
+                    Bahasa.ai is a company that build, develop, and train chat bots using AI/ML/NLP algorithm.
+                    It helps people to interact with technologies more easily.
+                    </p>
+                    <ul>
+                        <li className="mdc-typography--caption">Responsible in designing, planning, and delivering Bahasa.ai analytics dashboard</li>
+                    </ul>
+
+                    <p className="mdc-typography--headline6">esri</p>
+                    <p className="mdc-typography--caption">
+                        PT. Esri Indonesia <br />
+                        Solutions Engineer <br />
+                        (2017 - 2018) <br />
+                    </p>
+                    <p className="mdc-typography--body1">
+                        Esri is the global market leader in geographic information system (GIS) software, location intelligence, and mapping
+                        This company is the distributor of Esri products in Indonesia.
+                    </p>
+                    <ul>
+                        <li className="mdc-typography--caption">Automate data management tasks and analysis using Python</li>
+                        <li className="mdc-typography--caption">Provide training for python to users, do research, and sharing programming techniques with team</li>
+                        <li className="mdc-typography--caption">Build various prototypes and analytical dashboards for various government body, and public and private companies</li>
+                    </ul>
+                   </div>
             </div>
           </div>
         </div>
