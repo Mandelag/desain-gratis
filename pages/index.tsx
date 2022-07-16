@@ -24,7 +24,8 @@ const IndexPage = () => {
     }, [ctx.title])
     
     return (
-          <div className="mdc-layout-grid__inner">
+      <div className="mdc-layout-grid">
+        <div className="mdc-layout-grid__inner">
             <div className={`mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-8-desktop ${styles.container}`}>
                   <h1 className={`mdc-typography--headline2`} >
                     Welcome to my blog
@@ -65,6 +66,7 @@ const IndexPage = () => {
                     </p>
               </div>
             </div>
+          </div>
     )
   }
 
