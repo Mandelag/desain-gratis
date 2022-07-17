@@ -34,12 +34,14 @@ const IndexPage = () => {
                     <button className="mdc-button mdc-button--touch mdc-button mdc-button--raised">
                       <span className="mdc-button__ripple mdc-ripple-surface--accent"></span>
                       <span className="mdc-button__touch"></span>
-                      <span className="mdc-button__label">SUS BUTTON</span>
+                      <i className="material-symbols-outlined mdc-button__icon" aria-hidden="true">palette</i>
+                      <span className="mdc-button__label">TOGGLE THEME</span>
                     </button>
                   </div>
             </div>
+
             <div className="mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop mdc-theme--surface	 mdc-theme--on-surface">
-                    <p className="mdc-typography--body1">
+                  <p className="mdc-typography--body1">
                       "Desain gratis" is an Indonesian word for free design. It is a pun on "desain grafis" (graphic design). 
                     </p>
   
@@ -64,7 +66,21 @@ const IndexPage = () => {
                       In the same spirit for the exciting commentary with above <a href="https://github.com/material-components" target="_blank"> Material Components library</a> above, 
                       I'll also share any other exciting open source library that caught my interest! So stay tuned.
                     </p>
+                    <p className="mdc-typography--caption">
+                      Regards, <br /><br />Keenan Gebze <br />
+                    </p>
+                    <div>
+                      <hr />
+                    <p className="mdc-typography--subtitle2">
+                    About me
+                    </p>
+                  <p className="mdc-typography--body2">
+                    I'm a back end engineer.
+                    This is the place where I do experiments / learning about FE development. 
+                  </p>
+                  </div>
               </div>
+
             </div>
           </div>
     )

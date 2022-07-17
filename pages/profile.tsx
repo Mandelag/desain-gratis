@@ -33,7 +33,7 @@ const CVPage = () => {
       }, []);
     
     useEffect(() => {
-        ctx.changeTitle("Profile & CV");
+        ctx.changeTitle("Experiences");
       }, [ctx.title])
   
   return (
@@ -48,8 +48,10 @@ const CVPage = () => {
                     <div className="mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12-desktop">
                         <Image src={profilePic} width="150px" height="150px" alt="profile picture"/>
                         <h2 className={`mdc-typography--caption`}>Keenan Mandela Gebze</h2>
-                        <p className={`mdc-typography--caption`}>Linkedin</p>
-                        <p className={`mdc-typography--caption`}>Github</p>
+                        <a href="https://www.linkedin.com/in/keenan-gebze/" target="_blank"><p className={`mdc-typography--caption`}>Linkedin</p></a>
+                        <a href="https://www.github.com/mandelag" target="_blank"><p className={`mdc-typography--caption`}>Github</p></a>
+                        <hr />
+                        <p className="mdc-typography--caption">This site is currently under development! <br />Many information are not yet complete.</p>
                     </div>
                 </div>
             </div>
@@ -113,6 +115,9 @@ const CVPage = () => {
 
 
                 <div className="mdc-layout-grid">   
+                    <div className="mdc-layout-grid__inner">
+                        <div className="mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12-desktop">
+
                     <p className="mdc-typography--headline6">Tokopedia</p>
                     <p className="mdc-typography--caption">
                         PT. Tokopedia <br />
@@ -159,9 +164,11 @@ const CVPage = () => {
                         <li className="mdc-typography--caption">Build various prototypes and analytical dashboards for various government body, and public and private companies</li>
                     </ul>
                    </div>
+                   </div>
+                   </div>
+                   </div>
             </div>
           </div>
-        </div>
     )
 }
 
