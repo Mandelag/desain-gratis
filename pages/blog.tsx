@@ -1,8 +1,16 @@
 import Header from '../components/header';
 import '@material/typography/dist/mdc.typography.css';
 import '@material/layout-grid/dist/mdc.layout-grid.css';
+import { useContext, useEffect } from 'react';
+import {MyContext} from '../components/header';
 
 const Blog = () => {    
+    const ctx = useContext(MyContext);    
+    useEffect(() => {
+        ctx.changeTitle("Blog");
+      }, [ctx.title])
+  
+
     return (
         <>
               <div className="mdc-layout-grid">

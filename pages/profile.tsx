@@ -22,16 +22,7 @@ import "@material/tab-indicator/dist/mdc.tab-indicator.css";
 import "@material/tab/dist/mdc.tab.css";
 
 const CVPage = () => {
-    const ctx = useContext(MyContext);
-
-    const [body, setBody ] = useState(null);
-    const ref = useCallback((node) => {
-        if (node !== null) {
-            const t = new MDCTabBar(node);
-            setBody(t);
-        }
-      }, []);
-    
+    const ctx = useContext(MyContext);    
     useEffect(() => {
         ctx.changeTitle("Experiences");
       }, [ctx.title])

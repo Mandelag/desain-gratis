@@ -142,7 +142,7 @@ const IndexPage = ({children}) => {
             <a className="mdc-deprecated-list-item">
               <span className="mdc-deprecated-list-item__ripple"></span>
                 <i className="material-symbols-outlined mdc-deprecated-list-item__graphic" aria-hidden="true">person</i>
-              <span className="mdc-deprecated-list-item__text">Profile &amp; CV</span>
+              <span className="mdc-deprecated-list-item__text">Experiences</span>
             </a>
             </Link>
             <Link className="mdc-deprecated-list-item" href="/blog">
