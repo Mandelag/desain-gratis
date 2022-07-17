@@ -41,6 +41,14 @@ const IndexPage = () => {
             </div>
 
             <div className="mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop mdc-theme--surface	 mdc-theme--on-surface">
+              <div style={{display: 'flex', alignContent: 'center', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row'}}>
+                  <span className="material-symbols-outlined" aria-hidden="true" style={{padding: '12px', color: '#FFD600'}}>warning</span><br />
+                  <p className="mdc-typography--caption">
+                    This blog is currently under development.<br />
+                    This blog is also used to do experiments, so expect unpredictable behaviour here and there.<br />
+                  </p>
+                </div>
+                  <hr />
                   <p className="mdc-typography--body1">
                       "Desain gratis" is an Indonesian word for free design. It is a pun on "desain grafis" (graphic design). 
                     </p>
@@ -50,13 +58,12 @@ const IndexPage = () => {
                     </p>
   
                     <p className="mdc-typography--body1">
-                    In this site, however, I use it to explore material design and <a href="https://github.com/material-components" target="_blank">this cool Material Components library</a>.
+                    In this site however, I use it to explore material design and <a href="https://github.com/material-components" target="_blank">this cool Material Components library</a>.
                     </p>
   
                     <p className="mdc-typography--body1">
-                      As of this writing, the Material Design library is under active development by Google engineers. They have a lot to do!
-                      Many material design component are not yet implemented by this library (bottom sheets, etc.). 
-                      In addition to that, they also aim to implement Material 3 standard. It is crazy lot of work. 
+                      As of this writing, the Material Design library is under active development by Google engineers.
+                      It is crazy lot of work. 
                     </p>
                     <p className="mdc-typography--body1">
                      As a user for this library, I can only cheers.. or use them to develop website as an early adopter,
@@ -70,14 +77,6 @@ const IndexPage = () => {
                       Regards, <br /><br />Keenan Gebze <br />
                     </p>
                     <div>
-                      <hr />
-                    <p className="mdc-typography--subtitle2">
-                    About me
-                    </p>
-                  <p className="mdc-typography--body2">
-                    I'm a back end engineer.
-                    This is the place where I do experiments / learning about FE development. 
-                  </p>
                   </div>
               </div>
 
