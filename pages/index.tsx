@@ -3,6 +3,9 @@ import Header from '../components/header';
 import { useContext, useEffect } from 'react';
 
 // import Head from 'next/head';
+import Image from 'next/image';
+import profilePic from '../public/profpic.jpg';
+
 
 import '@material/typography/dist/mdc.typography.css';
 import '@material/top-app-bar/dist/mdc.top-app-bar.css';
@@ -13,9 +16,77 @@ import '@material/ripple/dist/mdc.ripple.css';
 import '@material/theme/dist/mdc.theme.css';
 import '@material/button/dist/mdc.button.css';
 import '@material/icon-button/dist/mdc.icon-button.css';
+import '@material/card/dist/mdc.card.css';
+import '@material/list/dist/mdc.list.css';
 
 import styles from '../styles/index.module.scss';
+import Link from 'next/link';
 
+const ProfileCard = () => {
+  return (
+    <>
+      <div className="mdc-card">
+        {/*   style={{padding: '16px'}} */}
+        <div className="mdc-card__primary-action"> 
+          <ul className="mdc-list">
+            <li className="mdc-list-item mdc-list-item--with-leading-avatar mdc-list-item--with-two-lines" tabIndex={0}>
+              {/* <span className="mdc-list-item__ripple"></span> */}
+              <span className="mdc-list-item__start">
+                <Image
+                  src={profilePic}
+                  objectFit="cover"
+                  width="40dp"
+                  height="40dp"
+                  alt="Hadji Ali"
+                  style={{
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    overflow: 'hidden',
+                  }}
+                />
+              </span>
+              <span className="mdc-list-item__content" id="gg">
+                {/* <span className="mdc-list-item__overline-text">Overline</span> */}
+                <span className="mdc-list-item__primary-text">Keenan Mandela Gebze</span>
+                <span className="mdc-list-item__secondary-text">Software Engineer (Golang)</span>
+              </span>
+            </li>
+          </ul>
+          <div style={{paddingLeft: '16px', paddingRight: '16px', paddingBottom: '16px'}}>
+            <p className="mdc-typography--body2" style={{padding: 0, margin: 0}}>Graduated as scientist at Uni. Currently living my dream, working, learning, inside <a href="https://www.tokopedia.com" style={{textDecoration: 'none'}}>Tokopedia</a> for the last 3 years.</p>
+          </div>  
+    <div className="mdc-card__ripple"></div>
+    </div>
+  <div className="mdc-card__actions">
+    <div className="mdc-card__action-buttons">
+      <Link href="https://www.linkedin.com/in/keenan-gebze/" passHref>
+      <a target="_blank" style={{textDecoration: 'none'}}>
+        <button className="mdc-button mdc-card__action mdc-card__action--button">
+          <div className="mdc-button__ripple"></div>
+          <span className="mdc-button__label">Linkedin</span>
+        </button>
+      </a>
+      </Link>
+      <Link href="https://github.com/mandelag" passHref>
+      <a target="_blank" style={{textDecoration: 'none'}}>
+      <button className="mdc-button mdc-card__action mdc-card__action--button">
+        <div className="mdc-button__ripple"></div>
+        <span className="mdc-button__label">Github</span>
+      </button>
+      </a>
+      </Link>
+      <Link href="profile">
+      <button className="mdc-button mdc-card__action mdc-card__action--button">
+        <div className="mdc-button__ripple"></div>
+        <span className="mdc-button__label">CV</span>
+      </button>
+      </Link>
+    </div>
+  </div>
+</div>
+    </>
+  )
+}
   
 const IndexPage = () => {
     const ctx = useContext(MyContext);
@@ -41,14 +112,19 @@ const IndexPage = () => {
             </div>
 
             <div className="mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop mdc-theme--surface	 mdc-theme--on-surface">
-              <div style={{display: 'flex', alignContent: 'center', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row'}}>
+                <div>
+                  <ProfileCard />
+                </div>
+
+
+                <div style={{display: 'flex', alignContent: 'center', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', padding: '16px'}}>
                   <span className="material-symbols-outlined" aria-hidden="true" style={{padding: '12px', color: '#FFD600'}}>warning</span><br />
                   <p className="mdc-typography--caption">
-                    This blog is currently under development.<br />
-                    This blog is also used to do experiments, so expect unpredictable behaviour here and there.<br />
+                    This website is used for exploring many kind of technologies.<br />
                   </p>
                 </div>
-                  <hr />
+
+
                   <p className="mdc-typography--body1">
                       "Desain gratis" is an Indonesian word for free design. It is a pun on "desain grafis" (graphic design). 
                     </p>

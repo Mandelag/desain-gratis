@@ -23,19 +23,19 @@ import '@material/theme/dist/mdc.theme.css'
 
 const presets = [
   {
-    primary: 'black',
+    primary: 'black',           // tiktok (?)
     onPrimary: 'white',
   },
   {
-    primary: '#4527A0',
+    primary: 'rgba(76, 52, 148, 1)', // ovo
     onPrimary: 'white',
   },
   {
-    primary: '#B2DFDB',
+    primary: '#B2DFDB', // none in particular
     onPrimary: '#212121',
   },
   {
-    primary: '#ff8a80',
+    primary: '#ff8a80', // none in particular
     onPrimary: 'black',    
   },
   {
@@ -202,8 +202,8 @@ export const TopAppBar = ({onMenu = () => {}, title = ""}: TopAppBarProps) => {
     </section>
     <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
       <ButtonIcon icon="share" actionItem/>
-      <ButtonIcon icon="help" actionItem/>
-      <ButtonIcon icon="more_vert" actionItem/>
+      {/* <ButtonIcon icon="help" actionItem/> */}
+      {/* <ButtonIcon icon="more_vert" actionItem/> */}
     </section>
   </div>
 </header>

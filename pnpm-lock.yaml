@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@material/button': ^14.0.0
+  '@material/card': ^14.0.0
   '@material/drawer': ^14.0.0
   '@material/icon-button': ^14.0.0
   '@material/layout-grid': ^14.0.0
@@ -26,6 +27,7 @@ specifiers:
 
 dependencies:
   '@material/button': 14.0.0
+  '@material/card': 14.0.0
   '@material/drawer': 14.0.0
   '@material/icon-button': 14.0.0
   '@material/layout-grid': 14.0.0
@@ -79,6 +81,19 @@ packages:
       '@material/tokens': 14.0.0
       '@material/touch-target': 14.0.0
       '@material/typography': 14.0.0
+      tslib: 2.4.0
+    dev: false
+
+  /@material/card/14.0.0:
+    resolution: {integrity: sha512-SnpYWUrCb92meGYLXV7qa/k40gnHR6rPki6A1wz0OAyG2twY48f0HLscAqxBLvbbm1LuRaqjz0RLKGH3VzxZHw==}
+    dependencies:
+      '@material/dom': 14.0.0
+      '@material/elevation': 14.0.0
+      '@material/feature-targeting': 14.0.0
+      '@material/ripple': 14.0.0
+      '@material/rtl': 14.0.0
+      '@material/shape': 14.0.0
+      '@material/theme': 14.0.0
       tslib: 2.4.0
     dev: false
 
