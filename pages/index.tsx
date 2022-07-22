@@ -53,7 +53,8 @@ const ProfileCard = () => {
             </li>
           </ul>
           <div style={{paddingLeft: '16px', paddingRight: '16px', paddingBottom: '16px'}}>
-            <p className="mdc-typography--body2" style={{padding: 0, margin: 0}}>Graduated as scientist at Uni. Currently living my dream, working, learning, inside <a href="https://www.tokopedia.com" style={{textDecoration: 'none'}}>Tokopedia</a> for the last 3 years.</p>
+            <p className="mdc-typography--body2" style={{padding: 0, margin: 0}}>Graduated as a scientist at Uni. Currently living my dream, working, learning, inside <a href="https://www.tokopedia.com" style={{textDecoration: 'none'}}>Tokopedia</a> for the last 3 years.</p>
+            <p className="mdc-typography--body2">Will write about papers, cool libraries, open source tech, and other random things in this blog. Feel free to reach me in the links below.</p>
           </div>  
     <div className="mdc-card__ripple"></div>
     </div>
